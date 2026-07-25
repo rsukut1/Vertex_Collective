@@ -1,12 +1,14 @@
 /* ==========================================
-   VERTEX COLLECTIVE
-   Better Systems. Better Growth.
-   ========================================== */
+VERTEX COLLECTIVE
+Better Systems. Better Growth.
+Premium Consulting Style
+========================================== */
 
 :root {
-    /* Core brand palette */
-    --navy-dark:#081A2B;
-    --navy-sidebar:#061522;
+
+    /* Brand Colors */
+    --navy-dark:#071522;
+    --navy-sidebar:#050F1A;
     --navy:#102A43;
     --navy-light:#163A59;
 
@@ -15,29 +17,35 @@
     --teal-dark:#188A95;
 
     --gold:#D9A441;
+    --gold-light:#F0C674;
 
     --cream:#F7F4ED;
     --gray-light:#D9E2EC;
     --slate:#486581;
 
+
     /* Effects */
-    --teal-glow:rgba(44,177,188,.35);
+    --teal-glow:rgba(44,177,188,.25);
     --gold-glow:rgba(217,164,65,.25);
+
 
     /* Layout */
     --max-width:1200px;
 
+
     /* Typography */
-    --heading-font:"Inter",sans-serif;
-    --body-font:"Inter",sans-serif;
+    --heading-font:"Inter", sans-serif;
+    --body-font:"Inter", sans-serif;
+
 
     --transition-speed:.3s;
 }
 
 
-/* ==========================
-   GLOBAL RESET
-   ========================== */
+/* ==========================================
+GLOBAL RESET
+========================================== */
+
 
 * {
     margin:0;
@@ -52,10 +60,14 @@ html {
 
 
 body {
+
     background:var(--navy-dark);
     color:var(--cream);
+
     font-family:var(--body-font);
+
     line-height:1.7;
+
     overflow-x:hidden;
 }
 
@@ -70,458 +82,773 @@ h1,
 h2,
 h3,
 h4 {
+
     font-family:var(--heading-font);
+
     font-weight:700;
+
     line-height:1.15;
+
 }
 
 
 h1 {
-    font-size:clamp(2.8rem,5vw,4.2rem);
-    letter-spacing:-1.5px;
+
+    font-size:clamp(2.5rem,4vw,3.8rem);
+
+    letter-spacing:-1px;
+
 }
 
 
 h2 {
-    font-size:clamp(2rem,3vw,2.8rem);
+
+    font-size:clamp(1.8rem,3vw,2.5rem);
+
 }
 
 
 h3 {
-    font-size:1.5rem;
+
+    font-size:1.35rem;
+
 }
 
 
 p {
+
     color:var(--gray-light);
+
     max-width:65ch;
+
 }
 
 
-/* ==========================
-   LAYOUT
-   ========================== */
 
-.container {
-    width:90%;
-    max-width:var(--max-width);
-    margin:auto;
-}
+/* ==========================================
+LAYOUT
+========================================== */
 
 
 .layout {
+
     display:grid;
+
     grid-template-columns:280px 1fr;
+
     min-height:100vh;
+
 }
 
 
 main {
-    padding:0 4rem;
+
+    padding:0 5rem;
+
     position:relative;
+
 }
 
 
-/* ==========================
-   BACKGROUND
-   ========================== */
+/* ==========================================
+PINSTRIPE BACKGROUND
+========================================== */
+
 
 .grid-background {
 
     position:fixed;
+
     inset:0;
 
-    background-image:
-    linear-gradient(rgba(44,177,188,.045) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(44,177,188,.045) 1px,transparent 1px);
 
-    background-size:50px 50px;
+    background:
+
+    repeating-linear-gradient(
+        90deg,
+        rgba(255,255,255,.018) 0px,
+        rgba(255,255,255,.018) 1px,
+        transparent 1px,
+        transparent 7px
+    );
+
 
     pointer-events:none;
+
     z-index:0;
+
 }
 
 
 .layout {
+
     position:relative;
+
     z-index:1;
+
 }
 
 
-/* ==========================
-   SECTIONS
-   ========================== */
 
-.section {
-    padding:5rem 0;
-}
+/* ==========================================
+SIDEBAR
+========================================== */
 
-
-.brand-accent {
-    color:var(--teal);
-}
-
-
-.gold-accent {
-    color:var(--gold);
-}
-
-
-.section-number {
-
-    color:var(--teal);
-
-    font-size:4rem;
-    font-weight:800;
-
-    opacity:.18;
-
-    display:block;
-    margin-bottom:.5rem;
-}
-
-
-/* ==========================
-   SIDEBAR
-   ========================== */
 
 .sidebar {
 
     position:sticky;
+
     top:0;
 
     height:100vh;
 
+
     padding:2.5rem;
+
 
     background:var(--navy-sidebar);
 
-    border-right:1px solid rgba(255,255,255,.08);
+
+    border-right:
+
+    1px solid rgba(217,164,65,.18);
+
 
     display:flex;
+
     flex-direction:column;
+
+}
+
+
+.sidebar:after {
+
+    content:"";
+
+    position:absolute;
+
+    right:-1px;
+
+    top:0;
+
+    height:100%;
+
+    width:1px;
+
+    background:linear-gradient(
+        transparent,
+        var(--gold),
+        transparent
+    );
+
+    opacity:.35;
 
 }
 
 
 .logo-block {
 
+
     margin-bottom:3.5rem;
 
+
     display:flex;
+
     align-items:center;
+
     gap:1rem;
 
 }
 
 
+
 .logo-mark {
 
-    width:48px;
-    height:48px;
 
-    border-radius:12px;
+    width:52px;
 
-    background:var(--teal);
+    height:52px;
+
+
+    border-radius:14px;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--teal),
+        var(--teal-dark)
+    );
+
 
     display:flex;
-    justify-content:center;
+
     align-items:center;
+
+    justify-content:center;
+
 
     color:white;
 
     font-weight:800;
 
-    box-shadow:0 0 20px var(--teal-glow);
+    font-size:1.4rem;
+
+
+    box-shadow:
+
+    0 0 20px var(--teal-glow);
 
 }
 
 
+
 .logo-block h3 {
+
     margin:0;
+
+    letter-spacing:.5px;
+
 }
 
 
 .logo-block span {
-    color:var(--gray-light);
-    font-size:.95rem;
+
+    color:var(--gold);
+
+    font-size:.9rem;
+
+    letter-spacing:1px;
+
 }
+
 
 
 .sidebar nav {
 
+
     display:flex;
+
     flex-direction:column;
-    gap:1.25rem;
+
+
+    gap:1.15rem;
 
 }
+
 
 
 .sidebar nav a {
 
+
     color:var(--gray-light);
 
-    transition:all var(--transition-speed);
 
     font-weight:500;
 
+
+    position:relative;
+
+
+    padding-left:0;
+
+
+    transition:.3s ease;
+
 }
+
+
+
+.sidebar nav a:before {
+
+
+    content:"";
+
+    position:absolute;
+
+
+    left:-2.5rem;
+
+
+    top:50%;
+
+
+    transform:translateY(-50%);
+
+
+    height:0;
+
+
+    width:3px;
+
+
+    background:var(--gold);
+
+
+    transition:.3s ease;
+
+}
+
 
 
 .sidebar nav a:hover {
 
-    color:var(--teal);
 
-    transform:translateX(6px);
+    color:var(--teal-light);
+
+    transform:translateX(8px);
 
 }
 
 
-/* ==========================
-   HERO
-   ========================== */
+
+.sidebar nav a:hover:before {
+
+
+    height:22px;
+
+}
+
+
+
+/* ==========================================
+SECTIONS
+========================================== */
+
+
+.section {
+
+    padding:4.5rem 0;
+
+}
+
+
+.section-number {
+
+
+    display:block;
+
+
+    font-size:3.5rem;
+
+
+    font-weight:800;
+
+
+    color:var(--gold);
+
+
+    opacity:.18;
+
+
+    margin-bottom:.5rem;
+
+}
+
+
+
+.brand-accent {
+
+    color:var(--teal);
+
+}
+
+
+
+.gold-accent {
+
+    color:var(--gold);
+
+}
+
+
+
+/* ==========================================
+HERO
+========================================== */
+
 
 .hero {
 
+
     display:grid;
 
-    grid-template-columns:minmax(0,2fr) minmax(250px,1fr);
+
+    grid-template-columns:
+
+    minmax(0,1.8fr)
+
+    minmax(260px,1fr);
+
+
 
     gap:3rem;
 
-    min-height:75vh;
+
+    min-height:80vh;
+
 
     align-items:center;
 
-    padding:6rem 0;
+
+    padding:5rem 0;
 
 }
+
+
+
+.hero-tagline {
+
+
+    color:var(--gold);
+
+
+    letter-spacing:2px;
+
+
+    font-size:.8rem;
+
+
+    font-weight:700;
+
+
+}
+
 
 
 .hero-description {
 
-    margin:1.75rem 0;
 
-    font-size:1.15rem;
+    margin:1.5rem 0;
+
+
+    font-size:1.08rem;
+
 
 }
+
 
 
 .hero-actions {
 
+
     display:flex;
+
 
     gap:1rem;
 
+
     flex-wrap:wrap;
+
 
 }
 
 
-/* ==========================
-   BUTTONS
-   ========================== */
+
+/* ==========================================
+BUTTONS
+========================================== */
+
 
 .btn {
 
+
     display:inline-block;
 
-    padding:13px 26px;
 
-    border-radius:10px;
+    padding:12px 26px;
+
+
+    border-radius:8px;
+
 
     font-weight:600;
 
-    cursor:pointer;
 
-    transition:all var(--transition-speed);
+    transition:.3s ease;
+
 
 }
+
 
 
 .btn-primary {
 
+
     background:var(--teal);
+
 
     color:white;
 
+
 }
+
 
 
 .btn-primary:hover {
 
+
     background:var(--teal-light);
+
 
     transform:translateY(-3px);
 
-    box-shadow:0 10px 30px var(--teal-glow);
+
+    box-shadow:
+
+    0 12px 30px var(--teal-glow);
+
 
 }
+
 
 
 .btn-secondary {
 
-    border:1px solid var(--teal);
 
-    color:var(--teal);
+    border:1px solid var(--gold);
+
+
+    color:var(--gold);
+
 
 }
+
 
 
 .btn-secondary:hover {
 
-    background:rgba(44,177,188,.08);
+
+    background:rgba(217,164,65,.08);
+
 
 }
 
 
-/* ==========================
-   CARDS
-   ========================== */
 
-.card {
+/* ==========================================
+FLOW DIAGRAM
+========================================== */
 
-    background:var(--navy);
-
-    border:1px solid rgba(255,255,255,.06);
-
-    border-radius:18px;
-
-    padding:2rem;
-
-    transition:all var(--transition-speed);
-
-}
-
-
-.card:hover {
-
-    transform:translateY(-5px);
-
-    border-color:var(--teal);
-
-    box-shadow:0 15px 35px rgba(0,0,0,.25);
-
-}
-
-
-/* ==========================
-   FLOW DIAGRAM
-   ========================== */
 
 .flow-diagram {
 
+
     display:flex;
+
 
     flex-direction:column;
 
+
     align-items:center;
 
-    gap:18px;
+
+    gap:16px;
+
 
 }
+
 
 
 .node {
 
-    width:180px;
+
+    width:170px;
+
 
     padding:1rem;
 
+
     text-align:center;
+
 
     border-radius:12px;
 
-    background:rgba(255,255,255,.04);
 
-    border:1px solid rgba(44,177,188,.25);
+    background:rgba(255,255,255,.035);
+
+
+    border:
+
+    1px solid rgba(44,177,188,.3);
+
+
+    transition:.3s ease;
+
 
 }
+
+
+
+.node:hover {
+
+
+    border-color:var(--gold);
+
+
+    transform:scale(1.03);
+
+
+}
+
 
 
 .connection {
 
+
     width:2px;
 
-    height:40px;
 
-    background:var(--teal);
+    height:35px;
+
+
+    background:linear-gradient(
+        var(--teal),
+        var(--gold)
+    );
+
 
 }
 
 
-/* ==========================
-   GRIDS
-   ========================== */
+
+/* ==========================================
+CARDS
+========================================== */
+
+
+.card {
+
+
+    background:rgba(16,42,67,.75);
+
+
+    border:
+
+    1px solid rgba(255,255,255,.06);
+
+
+    border-radius:16px;
+
+
+    padding:1.8rem;
+
+
+    transition:.3s ease;
+
+
+}
+
+
+
+.card:hover {
+
+
+    transform:translateY(-5px);
+
+
+    border-color:var(--gold);
+
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.25);
+
+
+}
+
+
+
+/* ==========================================
+CONTENT GROUPS
+========================================== */
+
 
 .pillars {
 
+
     display:grid;
+
 
     grid-template-columns:repeat(3,1fr);
 
-    gap:2rem;
+
+    gap:1.5rem;
+
 
 }
+
 
 
 .timeline {
 
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:15px;
 
     margin-top:2rem;
 
-    font-size:1.1rem;
 
     color:var(--teal);
 
+
+    font-size:1.1rem;
+
+
 }
 
 
-/* ==========================
-   CALL TO ACTION
-   ========================== */
 
 .statement {
 
+
     text-align:center;
 
+
+    max-width:900px;
+
+
+    margin:auto;
+
+
 }
+
 
 
 .cta-section {
 
+
     max-width:850px;
 
-    margin:auto;
-
-    text-align:center;
 
 }
 
 
-/* ==========================
-   FOOTER
-   ========================== */
+
+/* ==========================================
+FOOTER
+========================================== */
+
 
 footer {
 
+
     padding:3rem 0;
 
-    border-top:1px solid rgba(255,255,255,.08);
+
+    border-top:
+
+    1px solid rgba(217,164,65,.15);
+
 
     text-align:center;
 
-    color:var(--gray-light);
 
 }
 
 
+
 footer p {
+
 
     max-width:none;
 
@@ -530,11 +857,14 @@ footer p {
 }
 
 
-/* ==========================
-   RESPONSIVE
-   ========================== */
+
+/* ==========================================
+RESPONSIVE
+========================================== */
+
 
 @media(max-width:900px){
+
 
     .layout {
 
@@ -565,5 +895,6 @@ footer p {
         grid-template-columns:1fr;
 
     }
+
 
 }
