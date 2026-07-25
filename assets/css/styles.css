@@ -481,6 +481,28 @@ SECTIONS
     margin:1.5rem auto;
 }
 
+.section {
+    padding:4rem 0;
+}
+
+.content-block {
+    max-width:850px;
+}
+
+.section h2,
+.section p,
+.section-number {
+    margin-left:0;
+}
+
+.section p {
+    margin-top:1.25rem;
+}
+
+.section-number {
+    margin-bottom:.25rem;
+}
+
 /* ==========================================
 HERO
 ========================================== */
