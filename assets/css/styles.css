@@ -463,7 +463,23 @@ SECTIONS
 
 }
 
+.content-block {
+    max-width:780px;
+}
 
+.cta-section {
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    padding:4rem 2rem;
+    border:1px solid rgba(217,164,65,.15);
+    border-radius:20px;
+    background:rgba(16,42,67,.35);
+}
+
+.cta-section p {
+    margin:1.5rem auto;
+}
 
 /* ==========================================
 HERO
