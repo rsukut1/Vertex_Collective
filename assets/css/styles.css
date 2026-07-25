@@ -395,7 +395,6 @@ SIDEBAR
 
 .sidebar nav a:hover {
 
-
     color:var(--teal-light);
 
     transform:translateX(8px);
@@ -403,11 +402,17 @@ SIDEBAR
 }
 
 
-
-.sidebar nav a:hover:before {
-
+.sidebar nav a:hover:before,
+.sidebar nav a.active:before {
 
     height:22px;
+
+}
+
+
+.sidebar nav a.active {
+
+    color:var(--gold);
 
 }
 
@@ -417,90 +422,42 @@ SIDEBAR
 SECTIONS
 ========================================== */
 
-
-.section {
-
-    padding:4.5rem 0;
-
-}
-
-
-.section-number {
-
-
-    display:block;
-
-
-    font-size:3.5rem;
-
-
-    font-weight:800;
-
-
-    color:var(--gold);
-
-
-    opacity:.18;
-
-
-    margin-bottom:.5rem;
-
-}
-
-
-
-.brand-accent {
-
-    color:var(--teal);
-
-}
-
-
-
-.gold-accent {
-
-    color:var(--gold);
-
-}
-
-.content-block {
-    max-width:780px;
-}
-
-.cta-section {
-    max-width:850px;
-    margin:auto;
-    text-align:center;
-    padding:4rem 2rem;
-    border:1px solid rgba(217,164,65,.15);
-    border-radius:20px;
-    background:rgba(16,42,67,.35);
-}
-
-.cta-section p {
-    margin:1.5rem auto;
-}
-
 .section {
     padding:4rem 0;
 }
 
+.section > *,
 .content-block {
     max-width:850px;
 }
 
-.section h2,
-.section p,
 .section-number {
-    margin-left:0;
+    display:block;
+
+    font-size:3.5rem;
+    font-weight:800;
+
+    color:var(--gold);
+
+    opacity:.18;
+
+    margin-bottom:.25rem;
+}
+
+.section h2 {
+    margin-bottom:1rem;
 }
 
 .section p {
     margin-top:1.25rem;
 }
 
-.section-number {
-    margin-bottom:.25rem;
+.brand-accent {
+    color:var(--teal);
+}
+
+.gold-accent {
+    color:var(--gold);
 }
 
 /* ==========================================
@@ -822,15 +779,15 @@ CONTENT GROUPS
 
 .timeline {
 
-
     margin-top:2rem;
-
 
     color:var(--teal);
 
-
     font-size:1.1rem;
 
+    max-width:850px;
+
+    line-height:2;
 
 }
 
@@ -936,3 +893,56 @@ RESPONSIVE
 
 
 }
+
+/* ==========================================
+FORMS
+========================================== */
+form {
+
+    max-width:700px;
+
+}
+
+
+label {
+
+    color:var(--cream);
+
+    font-weight:600;
+
+}
+
+
+input,
+textarea {
+
+    width:100%;
+
+    padding:14px;
+
+    margin-top:.5rem;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:10px;
+
+    color:var(--cream);
+
+    font-family:var(--body-font);
+
+}
+
+
+input:focus,
+textarea:focus {
+
+    outline:none;
+
+    border-color:var(--gold);
+
+    box-shadow:0 0 15px rgba(255,200,3,.15);
+
+}
+
